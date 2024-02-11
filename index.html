@@ -16,14 +16,36 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style.css" />
     <title>Interactive pricing component</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   </head>
   <body>
-    Simple, traffic-based pricing Sign-up for our 30-day trial. No credit card required. Pageviews $
-    /month Monthly Billing Yearly Billing 25% discount Unlimited websites 100% data ownership Email
-    reports Start my trial
+    <header>
+      <h1>Simple, traffic-based pricing</h1>
+      <p>Sign-up for our 30-day trial.</p>
+      <p>No credit card required.</p>
+    </header>
+    <main>
+      <h2>~~~ Pageviews</h2>
+      <input type="range" name="price-slider" id="" title="price-slider" />
+      <p><span>$</span>/month</p>
+      <div class="billing">
+        <p>Monthly Billing</p>
+        <label class="switch">
+          <input type="checkbox" title="toggle" />
+          <span class="toggle"></span>
+        </label>
+        <p>Yearly Billing</p>
+      </div>
+      <hr>
+      <div>
+        <p>Unlimited websites</p>
+        <p>100% data ownership</p>
+        <p>Email reports</p>
+        <button type="submit" title="Start my trial">Start my trial</button>
+      </div>
+    </main>
   </body>
 </html>
