@@ -43,10 +43,14 @@ main {
   border-radius: 10px;
 }
 main .pageviews {
-  margin: 1.5rem 1rem;
+  margin: 2rem 1rem;
+}
+main .pageviews > p {
+  color: hsl(225, 20%, 60%);
+  letter-spacing: 2PX;
 }
 main .pageviews input[type=range] {
-  margin: 1rem 0;
+  margin: 2rem 0;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -64,10 +68,56 @@ main .pageviews h2 span {
 }
 main .pageviews .billing {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   color: hsl(225, 20%, 60%);
   font-size: 15px;
+  gap: 0.5rem;
+}
+main .pageviews .billing p {
+  font-size: 10px;
+}
+main .pageviews .billing .switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+main .pageviews .billing .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+main .pageviews .billing .switch input:checked + .toggle {
+  background-color: hsl(174, 86%, 45%);
+}
+main .pageviews .billing .switch input:checked + .toggle::before {
+  transform: translateX(20px);
+}
+main .pageviews .billing .switch input:focus + .toggle {
+  box-shadow: 0 0 1px #2196F3;
+}
+main .pageviews .billing .switch .toggle {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(223, 50%, 87%);
+  transition: 0.4s;
+  border-radius: 50px;
+}
+main .pageviews .billing .switch .toggle::before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 4px;
+  bottom: 3px;
+  background-color: hsl(0, 0%, 100%);
+  transition: 0.4s;
+  border-radius: 50%;
 }
 main .pageviews .billing .discount {
   position: relative;
@@ -75,11 +125,11 @@ main .pageviews .billing .discount {
 main .pageviews .billing .discount::after {
   content: "-25%";
   position: absolute;
-  font-size: 12px;
+  font-size: 10px;
   background-color: hsl(14, 92%, 95%);
   color: hsl(15, 100%, 70%);
   border-radius: 10px;
-  padding: 0.2rem 0.3rem;
+  padding: 0.1rem 0.4rem;
   margin-left: 0.3rem;
 }
 main .trial {
@@ -102,4 +152,5 @@ main .trial button {
   padding: 0.5rem 2.5rem;
   margin: 1.5rem 0;
   border-radius: 50px;
+  border: none;
 }/*# sourceMappingURL=style.css.map */
