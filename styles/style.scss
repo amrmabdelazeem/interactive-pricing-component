@@ -1,1 +1,21 @@
 @import 'variables', 'utils';
+
+header{
+    background-image: url(/images/pattern-circles.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 3rem 0;
+
+    h1{
+        font-size: 1.3rem;
+        color: $text-cta-bg;
+        line-height: 2;
+    }
+
+    p{
+        font-size: $body-fontsize;
+        color: $text;
+        text-align: center;
+        line-height: 1.5;
+    }
+}
