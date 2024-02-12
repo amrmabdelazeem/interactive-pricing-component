@@ -59,9 +59,8 @@ main .pageviews input[type=range] {
   width: 100%;
   height: 10px;
   border-radius: 10px;
-  background-color: #eaeefb;
   outline: none;
-  position: relative;
+  background: linear-gradient(to right, #a5f3eb 50%, #eaeefb 50%);
 }
 main .pageviews input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;

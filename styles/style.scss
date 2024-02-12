@@ -41,11 +41,8 @@ main {
       width: 100%;
       height: 10px;
       border-radius: 10px;
-      background-color: $bg-empty-bar;
       outline: none;
-    //   overflow: hidden;
-      // box-shadow: -200px 0 0 200px $primary-color-slider-bar;
-      position: relative;
+      background: linear-gradient(to right, $primary-color-slider-bar 50%,$bg-empty-bar 50%);
 
       &::-webkit-slider-thumb {
         appearance: none;
