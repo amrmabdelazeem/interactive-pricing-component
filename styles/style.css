@@ -39,7 +39,7 @@ main {
   background-color: hsl(0, 0%, 100%);
   text-align: center;
   width: 85%;
-  box-shadow: 0 10px 10px 5px hsl(224, 65%, 95%);
+  box-shadow: 0 10px 10px 5px #eaeefb;
   border-radius: 10px;
 }
 main .pageviews {
@@ -59,8 +59,7 @@ main .pageviews input[type=range] {
   width: 100%;
   height: 10px;
   border-radius: 10px;
-  background-color: hsl(224, 65%, 95%);
-  background-color: hsl(174, 77%, 80%);
+  background-color: #eaeefb;
   outline: none;
   position: relative;
 }
@@ -75,7 +74,7 @@ main .pageviews input[type=range]::-webkit-slider-thumb {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 20px;
-  box-shadow: 0 15px 15px 0 hsl(174, 77%, 80%);
+  box-shadow: 0 15px 15px 0 #a5f3eb;
   cursor: pointer;
 }
 main .pageviews input[type=range]::-webkit-slider-thumb:hover {
@@ -85,7 +84,7 @@ main .pageviews input[type=range]::-webkit-slider-thumb:active {
   background-color: #0ca697;
 }
 main .pageviews h2 {
-  margin: 1rem 0;
+  margin: 0 0 2rem;
 }
 main .pageviews h2 span {
   font-size: 15px;
@@ -158,7 +157,8 @@ main .pageviews .billing .discount::after {
   margin-left: 0.3rem;
 }
 main .trial {
-  border-top: 2px solid hsl(224, 65%, 95%);
+  border-top: 2px solid #eaeefb;
+  padding-top: 1rem;
 }
 main .trial p {
   font-size: 15px;

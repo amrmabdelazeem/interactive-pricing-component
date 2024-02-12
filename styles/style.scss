@@ -42,7 +42,6 @@ main {
       height: 10px;
       border-radius: 10px;
       background-color: $bg-empty-bar;
-      background-color: $primary-color-slider-bar;
       outline: none;
     //   overflow: hidden;
       // box-shadow: -200px 0 0 200px $primary-color-slider-bar;
@@ -71,7 +70,7 @@ main {
     }
 
     h2 {
-      margin: 1rem 0;
+      margin: 0 0 2rem;
       span {
         font-size: $body-fontsize;
         color: $text;
@@ -153,6 +152,7 @@ main {
   }
   .trial {
     border-top: 2px solid $bg-empty-bar;
+    padding-top: 1rem;
 
     p {
       font-size: $body-fontsize;
