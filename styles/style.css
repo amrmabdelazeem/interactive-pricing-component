@@ -145,6 +145,7 @@ main .pageviews .billing .switch .toggle::before {
   background-color: hsl(0, 0%, 100%);
   transition: 0.4s;
   border-radius: 50%;
+  transition: 0.5s;
 }
 main .pageviews .billing .discount {
   position: relative;
