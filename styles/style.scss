@@ -1,150 +1,179 @@
-@import 'variables', 'utils';
+@import "variables", "utils";
 
-header{
-    background-image: url(/images/pattern-circles.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 3rem 0;
+header {
+  background-image: url(/images/pattern-circles.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 3rem 0;
 
-    h1{
-        font-size: 1.3rem;
-        color: $text-cta-bg;
-        line-height: 2;
-    }
+  h1 {
+    font-size: 1.3rem;
+    color: $text-cta-bg;
+    line-height: 2;
+  }
 
-    p{
-        font-size: $body-fontsize;
-        color: $text;
-        text-align: center;
-        line-height: 1.5;
-    }
+  p {
+    font-size: $body-fontsize;
+    color: $text;
+    text-align: center;
+    line-height: 1.5;
+  }
 }
 
-main{
-    background-color: $bg-white;
-    text-align: center;
-    width: 85%;
-    box-shadow: 0 10px 10px 5px $bg-empty-bar;
-    border-radius: 10px;
-    .pageviews{
-        margin: 2rem 1rem;
+main {
+  background-color: $bg-white;
+  text-align: center;
+  width: 85%;
+  box-shadow: 0 10px 10px 5px $bg-empty-bar;
+  border-radius: 10px;
+  .pageviews {
+    margin: 2rem 1rem;
 
-        & > p{
-            color: $text;
-            letter-spacing: 2PX;
+    & > p {
+      color: $text;
+      letter-spacing: 2px;
+      font-size: 10px;
+      font-weight: $font-extra;
+    }
+    input[type="range"] {
+      margin: 2rem 0;
+      appearance: none;
+      width: 100%;
+      height: 10px;
+      border-radius: 10px;
+      background-color: $bg-empty-bar;
+      background-color: $primary-color-slider-bar;
+      outline: none;
+    //   overflow: hidden;
+      // box-shadow: -200px 0 0 200px $primary-color-slider-bar;
+      position: relative;
+
+      &::-webkit-slider-thumb {
+        appearance: none;
+        width: 30px;
+        height: 30px;
+        background-color: $bg-slider;
+        border-radius: 50%;
+        background-image: url(/images/icon-slider.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 20px;
+        box-shadow: 0 15px 15px 0 $primary-color-slider-bar;
+        cursor: pointer;
+
+        &:hover{
+            background-color: lighten($bg-slider, 5%);
         }
-        input[type="range"]{
-            margin: 2rem 0;
-            appearance: none;
-            width: 100%;
-            height: 8px;
-            border-radius: 10px;
+        &:active{
+            background-color: darken($bg-slider, 10%);
+        }
+      }
+    }
+
+    h2 {
+      margin: 1rem 0;
+      span {
+        font-size: $body-fontsize;
+        color: $text;
+      }
+    }
+
+    .billing {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $text;
+      font-size: $body-fontsize;
+      gap: 0.5rem;
+
+      p {
+        font-size: 10px;
+      }
+
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        height: 20px;
+
+        input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+
+          &:checked + .toggle {
             background-color: $bg-slider;
-        }
-
-        h2{
-            margin: 1rem 0;
-            span{
-                font-size: $body-fontsize;
-                color: $text;
+            &::before {
+              transform: translateX(20px);
             }
+          }
+          &:focus + .toggle {
+            box-shadow: 0 0 1px #2196f3;
+          }
         }
+        .toggle {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: $bg-toggle;
+          transition: 0.4s;
+          border-radius: 50px;
 
-        .billing{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: $text;
-            font-size: $body-fontsize;
-            gap: .5rem;
-            
-            p{
-                font-size: 10px;
-            }
-
-            .switch {
-                position: relative;
-                display: inline-block;
-                width: 40px;
-                height: 20px;
-
-                input{
-                    opacity: 0;
-                    width: 0;
-                    height: 0;
-
-                    &:checked + .toggle{
-                        background-color: $bg-slider;
-                        &::before{
-                            transform: translateX(20px);
-                        }
-                    }
-                    &:focus + .toggle{
-                        box-shadow: 0 0 1px #2196F3;
-                    }
-                }
-                .toggle{
-                    position: absolute;
-                    cursor: pointer;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    background-color: $bg-toggle;
-                    transition: .4s;
-                    border-radius: 50px;
-
-                    &::before{
-                        position: absolute;
-                        content: "";
-                        height: 14px;
-                        width: 14px;
-                        left: 4px;
-                        bottom: 3px;
-                        background-color: $bg-white;
-                        transition: .4s;
-                        border-radius: 50%;
-                    }
-                }
-              }
-
-            .discount{
-                position: relative;
-                &::after{
-                    content: "-25%";
-                    position: absolute;
-                    font-size: 10px;
-                    background-color: $bg-discount;
-                    color: $text-discount;
-                    border-radius: 10px;
-                    padding: .1rem .4rem;
-                    margin-left: .3rem;
-                }
-            }
+          &::before {
+            position: absolute;
+            content: "";
+            height: 14px;
+            width: 14px;
+            left: 4px;
+            bottom: 3px;
+            background-color: $bg-white;
+            transition: 0.4s;
+            border-radius: 50%;
+          }
         }
+      }
+
+      .discount {
+        position: relative;
+        &::after {
+          content: "-25%";
+          position: absolute;
+          font-size: 10px;
+          background-color: $bg-discount;
+          color: $text-discount;
+          border-radius: 10px;
+          padding: 0.1rem 0.4rem;
+          margin-left: 0.3rem;
+        }
+      }
     }
-    .trial{
-        border-top: 2px solid $bg-empty-bar;
+  }
+  .trial {
+    border-top: 2px solid $bg-empty-bar;
 
-        p{
-            font-size: $body-fontsize;
-            color: $text;
-            position: relative;
-            line-height: 2;
-            &::before{
-                content:url(/images/icon-check.svg);
-                margin-right: 1rem;
-            }
-        }
-
-        button{
-            background-color: $text-cta-bg;
-            color: $text-cta;
-            font-size: $body-fontsize;
-            padding: .5rem 2.5rem;
-            margin: 1.5rem 0;
-            border-radius: 50px;
-            border: none;
-        }
+    p {
+      font-size: $body-fontsize;
+      color: $text;
+      position: relative;
+      line-height: 2;
+      &::before {
+        content: url(/images/icon-check.svg);
+        margin-right: 1rem;
+      }
     }
+
+    button {
+      background-color: $text-cta-bg;
+      color: $text-cta;
+      font-size: $body-fontsize;
+      padding: 0.5rem 2.5rem;
+      margin: 1.5rem 0;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+    }
+  }
 }

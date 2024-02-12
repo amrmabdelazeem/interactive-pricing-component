@@ -47,7 +47,9 @@ main .pageviews {
 }
 main .pageviews > p {
   color: hsl(225, 20%, 60%);
-  letter-spacing: 2PX;
+  letter-spacing: 2px;
+  font-size: 10px;
+  font-weight: 800;
 }
 main .pageviews input[type=range] {
   margin: 2rem 0;
@@ -55,9 +57,32 @@ main .pageviews input[type=range] {
      -moz-appearance: none;
           appearance: none;
   width: 100%;
-  height: 8px;
+  height: 10px;
   border-radius: 10px;
+  background-color: hsl(224, 65%, 95%);
+  background-color: hsl(174, 77%, 80%);
+  outline: none;
+  position: relative;
+}
+main .pageviews input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  width: 30px;
+  height: 30px;
   background-color: hsl(174, 86%, 45%);
+  border-radius: 50%;
+  background-image: url(/images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px;
+  box-shadow: 0 15px 15px 0 hsl(174, 77%, 80%);
+  cursor: pointer;
+}
+main .pageviews input[type=range]::-webkit-slider-thumb:hover {
+  background-color: #12edd7;
+}
+main .pageviews input[type=range]::-webkit-slider-thumb:active {
+  background-color: #0ca697;
 }
 main .pageviews h2 {
   margin: 1rem 0;
@@ -95,7 +120,7 @@ main .pageviews .billing .switch input:checked + .toggle::before {
   transform: translateX(20px);
 }
 main .pageviews .billing .switch input:focus + .toggle {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #2196f3;
 }
 main .pageviews .billing .switch .toggle {
   position: absolute;
@@ -153,4 +178,5 @@ main .trial button {
   margin: 1.5rem 0;
   border-radius: 50px;
   border: none;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
