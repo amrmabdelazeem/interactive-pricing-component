@@ -71,9 +71,13 @@ main {
 
     h2 {
       margin: 0 0 2rem;
+      font-size: $body-fontsize;
+      color: $text;
+      font-weight: $font-normal;
       span {
-        font-size: $body-fontsize;
-        color: $text;
+        font-size: 1.5rem;
+        color: #000;
+        font-weight: $font-extra;
       }
     }
 

@@ -85,10 +85,14 @@ main .pageviews input[type=range]::-webkit-slider-thumb:active {
 }
 main .pageviews h2 {
   margin: 0 0 2rem;
-}
-main .pageviews h2 span {
   font-size: 15px;
   color: hsl(225, 20%, 60%);
+  font-weight: 600;
+}
+main .pageviews h2 span {
+  font-size: 1.5rem;
+  color: #000;
+  font-weight: 800;
 }
 main .pageviews .billing {
   display: flex;
