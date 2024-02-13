@@ -11,7 +11,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100%;
-  background-image: url(/images/bg-pattern.svg);
+  background-image: url(/assets/images/bg-pattern.svg);
   background-repeat: no-repeat;
   background-size: 100% 50%;
   padding: 2rem 0 4rem;
@@ -25,8 +25,26 @@ body {
     gap: 1rem;
   }
 }
+@keyframes swipeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes showUp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 header {
-  background-image: url(/images/pattern-circles.svg);
+  background-image: url(/assets/images/pattern-circles.svg);
   background-repeat: no-repeat;
   background-position: center;
   padding: 3rem 0;
@@ -79,7 +97,7 @@ main .pageviews input[type=range]::-webkit-slider-thumb {
   height: 30px;
   background-color: hsl(174, 86%, 45%);
   border-radius: 50%;
-  background-image: url(/images/icon-slider.svg);
+  background-image: url(/assets/images/icon-slider.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 20px;
@@ -182,7 +200,7 @@ main .trial p {
   line-height: 2;
 }
 main .trial p::before {
-  content: url(/images/icon-check.svg);
+  content: url(/assets/images/icon-check.svg);
   margin-right: 1rem;
 }
 main .trial button {
@@ -267,7 +285,7 @@ main .trial button:hover {
     height: 18px;
   }
   main .pageviews .billing .discount::after {
-    content: "-25% discount";
+    content: "25% discount";
     font-size: 12px;
     top: 2px;
     width: -moz-max-content;

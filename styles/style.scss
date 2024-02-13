@@ -1,7 +1,7 @@
 @import "variables", "utils";
 
 header {
-  background-image: url(/images/pattern-circles.svg);
+  background-image: url(/assets/images/pattern-circles.svg);
   background-repeat: no-repeat;
   background-position: center;
   padding: 3rem 0;
@@ -52,7 +52,7 @@ main {
         height: 30px;
         background-color: $bg-slider;
         border-radius: 50%;
-        background-image: url(/images/icon-slider.svg);
+        background-image: url(/assets/images/icon-slider.svg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: 20px;
@@ -166,7 +166,7 @@ main {
       position: relative;
       line-height: 2;
       &::before {
-        content: url(/images/icon-check.svg);
+        content: url(/assets/images/icon-check.svg);
         margin-right: 1rem;
       }
     }
@@ -265,7 +265,7 @@ main {
         }
         .discount{
           &::after{
-            content: "-25% discount";
+            content: "25% discount";
             font-size: 12px;
             top: 2px;
             width: max-content;
