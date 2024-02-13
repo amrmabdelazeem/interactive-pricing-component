@@ -17,11 +17,30 @@ body {
   padding: 2rem 0 4rem;
 }
 
+@keyframes swipeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes showUp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 header {
   background-image: url(/images/pattern-circles.svg);
   background-repeat: no-repeat;
   background-position: center;
   padding: 3rem 0;
+  animation: showUp 0.8s ease-in-out;
 }
 header h1 {
   font-size: 1.3rem;
@@ -41,6 +60,7 @@ main {
   width: 85%;
   box-shadow: 0 10px 10px 5px #eaeefb;
   border-radius: 10px;
+  animation: swipeIn 0.6s ease-in;
 }
 main .pageviews {
   margin: 2rem 1rem;
@@ -119,7 +139,7 @@ main .pageviews .billing .switch input:checked + .toggle {
   background-color: hsl(174, 86%, 45%);
 }
 main .pageviews .billing .switch input:checked + .toggle::before {
-  transform: translateX(20px);
+  transform: translateX(18px);
 }
 main .pageviews .billing .switch input:focus + .toggle {
   box-shadow: 0 0 1px #2196f3;
@@ -134,6 +154,9 @@ main .pageviews .billing .switch .toggle {
   background-color: hsl(223, 50%, 87%);
   transition: 0.4s;
   border-radius: 50px;
+}
+main .pageviews .billing .switch .toggle:hover {
+  background-color: hsl(174, 86%, 45%);
 }
 main .pageviews .billing .switch .toggle::before {
   position: absolute;
@@ -183,4 +206,7 @@ main .trial button {
   border-radius: 50px;
   border: none;
   cursor: pointer;
+}
+main .trial button:hover {
+  color: hsl(0, 0%, 100%);
 }/*# sourceMappingURL=style.css.map */
