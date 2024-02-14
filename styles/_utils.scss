@@ -43,3 +43,17 @@ body{
 
     }
 }
+
+@mixin thumb-styling{
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    background-color: $bg-slider;
+    border-radius: 50%;
+    background-image: url(/assets/images/icon-slider.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px;
+    box-shadow: 0 15px 15px 0 $primary-color-slider-bar;
+    cursor: pointer;
+}
