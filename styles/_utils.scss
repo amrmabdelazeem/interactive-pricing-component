@@ -56,4 +56,11 @@ body{
     background-size: 20px;
     box-shadow: 0 15px 15px 0 $primary-color-slider-bar;
     cursor: pointer;
+
+    &:hover {
+        background-color: lighten($bg-slider, 5%);
+      }
+      &:active {
+        background-color: darken($bg-slider, 10%);
+      }
 }
