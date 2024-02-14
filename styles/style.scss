@@ -225,9 +225,10 @@ main {
         width: 90%;
 
         &::-webkit-slider-thumb {
-          width: 40px;
-          height: 40px;
-          background-size: 25px;
+          @include thumb;
+        }
+        &::-moz-range-thumb{
+          @include thumb;
         }
       }
       .billing {

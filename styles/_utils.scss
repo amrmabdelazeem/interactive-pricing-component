@@ -64,3 +64,9 @@ body{
         background-color: darken($bg-slider, 10%);
       }
 }
+
+@mixin thumb{
+    width: 40px;
+    height: 40px;
+    background-size: 25px;
+}

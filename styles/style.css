@@ -289,6 +289,11 @@ main .trial button:hover {
     height: 40px;
     background-size: 25px;
   }
+  main .pageviews input[type=range]::-moz-range-thumb {
+    width: 40px;
+    height: 40px;
+    background-size: 25px;
+  }
   main .pageviews .billing {
     grid-column: span 2;
     gap: 2rem;
