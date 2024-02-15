@@ -1,5 +1,16 @@
 {
   "devDependencies": {
     "parcel": "^2.11.0"
-  }
+  },
+  "name": "interactive-pricing-component-main",
+  "description": "An Interactive pricing component that shows monthly and yearly cost based on user input.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "browserlist":"> 1%, last 4 versions, not dead",
+  "scripts": {
+    "build": "parcel build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
