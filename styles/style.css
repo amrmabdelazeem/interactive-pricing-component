@@ -20,7 +20,7 @@ body {
 @media (min-width: 1440px) {
   body {
     height: 100vh;
-    padding-top: 3rem;
+    padding-top: 0;
     background-size: 100% 60%;
     gap: 1rem;
   }
