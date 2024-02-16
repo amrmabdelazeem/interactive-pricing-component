@@ -1,4 +1,4 @@
-# Interactive pricing component solution
+# Interactive pricing component
 
 This is a solution to the [Interactive pricing component](https://www.frontendmentor.io/challenges/interactive-pricing-component-t0m8PIyY8). 
 
@@ -75,4 +75,4 @@ Users should be able to:
 
 - Github - [Github](https://github.com/amrmabdelazeem)
 - Frontend Mentor - [@amrmabdelazeem](https://www.frontendmentor.io/profile/amrmabdelazeem)
-- Portfolio - [Portfolio](https://amr93-personal-portfolio.vercel.app/);
+- Portfolio - [Portfolio](https://amr93-personal-portfolio.vercel.app/)
